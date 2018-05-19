@@ -1,9 +1,5 @@
-import React, {Component} from 'react'
+import bridge from './react-d3';
+import sizeMe from 'react-sizeme';
+import D3Donut from './donut';
 
-export default class extends Component {
-  render() {
-    return <div>
-      <h2>Welcome to React components</h2>
-    </div>
-  }
-}
+export const Donut = sizeMe({ monitorHeight: true })(bridge(D3Donut));
